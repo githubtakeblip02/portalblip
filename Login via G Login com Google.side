@@ -1,0 +1,68 @@
+{
+  "id": "662be4b6-0b21-4f63-9f44-8025a1a28b99",
+  "version": "2.0",
+  "name": "Login via G+ Login com Google",
+  "url": "https://account.blip.ai",
+  "tests": [{
+    "id": "7a6beb3d-175c-401f-936a-7a29e4f0970f",
+    "name": "Login G+Login com Google",
+    "commands": [{
+      "id": "a1922439-5766-4cf7-9a9e-026922f27767",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e3f2089-4ed8-4675-9ef6-b2f4014f6df0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1048x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad93f777-51e4-49bf-9ef7-d2d864c28a2a",
+      "comment": "",
+      "command": "click",
+      "target": "id=blip-login-with-google",
+      "targets": [
+        ["id=blip-login-with-google", "id"],
+        ["linkText=Login com Google", "linkText"],
+        ["css=#blip-login-with-google", "css:finder"],
+        ["xpath=//a[@id='blip-login-with-google']", "xpath:attributes"],
+        ["xpath=//main[@id='blip-login-page']/section/div[2]/main/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/external/challenge?provider=google&returnUrl=%2Faccount')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,' Login com Google')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d3d7ce2-9241-4d61-bb2d-2408c6ed9544",
+      "comment": "",
+      "command": "click",
+      "target": "id=logout-link",
+      "targets": [
+        ["id=logout-link", "id"],
+        ["linkText=(Sair)", "linkText"],
+        ["css=#logout-link", "css:finder"],
+        ["xpath=//a[contains(text(),'(Sair)')]", "xpath:link"],
+        ["xpath=//a[@id='logout-link']", "xpath:attributes"],
+        ["xpath=//div[@id='navbar']/div[2]/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'(Sair)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "934327bb-ad3a-46d1-8690-1d6b37fedd30",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7a6beb3d-175c-401f-936a-7a29e4f0970f"]
+  }],
+  "urls": ["https://account.blip.ai/"],
+  "plugins": []
+}
